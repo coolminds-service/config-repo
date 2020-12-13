@@ -12,4 +12,4 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://192.168.1.203;databaseName=launch_db
     username: rathish
-    password: r@th15hR
+    password: r@th15h
