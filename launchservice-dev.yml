@@ -1,0 +1,12 @@
+server:
+  port: 8089
+spring:
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+       ddl-auto: update
+ datasource:
+   url: jdbc:mysql://localhost/launchdb
+   username: root
+   password: r@th15hR
