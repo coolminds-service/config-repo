@@ -7,9 +7,8 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.SQLServer2012Dialect
   datasource:
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: jdbc:sqlserver://192.168.1.203;databaseName=mservice_db
+    driver-class-name: net.sourceforge.jtds.jdbc.Driver
+    url: jdbc:jtds:sqlserver://localhost:1433;databaseName=mservice_db;instance=SQLServer2014;
     username: rathish
     password: r@th15h
