@@ -18,6 +18,8 @@ eureka:
   server:
     waitTimeInMsWhenSyncEmpty: 5
     enableSelfPreservation: false
+    expected-client-renewal-interval-seconds:  3
+    eviction-interval-timer-in-ms:  2000
 
 
 management:
