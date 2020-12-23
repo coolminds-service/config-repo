@@ -3,13 +3,19 @@ server:
 eureka:
   instance:
     hostname: localhost
+    leaseRenewalIntervalInSeconds: 30
+    leaseExpirationDurationInSeconds: 10
+    evictionIntervalTimerInMs: 1000
   client:
     register-with-eureka: false
-    fetch-registry: false
-    instance-info-replication-interval-seconds: 3
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 2
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    wait-time-in-ms-when-sync-empty: 5
-    renewalPercentThreshold: 0.12
-    enableSelfPreservation: false
+    waitTimeInMsWhenSyncEmpty: 0
+    enableSelfPreservation: true
+    renewalPercentThreshold: 0.85
+    evictionIntervalTimerInMs: 1000
+
