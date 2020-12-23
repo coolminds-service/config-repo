@@ -1,21 +1,26 @@
+spring:
+  application:
+    name: eureka-server
+  boot:
+    admin:
+      context-path: /admin
 server:
   port: 8070
 eureka:
   instance:
-    hostname: localhost
-    leaseRenewalIntervalInSeconds: 30
-    leaseExpirationDurationInSeconds: 10
-    evictionIntervalTimerInMs: 1000
+    hostname: eurekaserver
   client:
-    register-with-eureka: false
-    fetchRegistry: true
-    registryFetchIntervalSeconds: 5
-    instanceInfoReplicationIntervalSeconds: 2
-    service-url:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    waitTimeInMsWhenSyncEmpty: 0
-    enableSelfPreservation: true
-    renewalPercentThreshold: 0.85
-    evictionIntervalTimerInMs: 1000
+    waitTimeInMsWhenSyncEmpty: 5
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
