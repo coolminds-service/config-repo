@@ -14,5 +14,7 @@ camunda:
 spring:
   cloud:
     loadbalancer:
+      cache:
+        enabled: false
       ribbon:
         enabled: false
