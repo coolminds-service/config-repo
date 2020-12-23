@@ -11,3 +11,8 @@ camunda:
     admin-user:
       id: rathish
       password: rathish123
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
