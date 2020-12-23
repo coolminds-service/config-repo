@@ -6,6 +6,7 @@ spring:
       context-path: /admin
 server:
   port: 8070
+  renewalPercentThreshold: 0.12
 eureka:
   instance:
     hostname: eurekaserver
@@ -16,6 +17,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 5
+    enableSelfPreservation: false
 
 
 management:
